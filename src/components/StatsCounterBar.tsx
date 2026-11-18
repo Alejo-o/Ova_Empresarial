@@ -5,28 +5,28 @@ export const StatsCounterBar: React.FC = () => {
   const stats = [
     {
       icon: Building2,
-      value: '25+',
-      label: 'Años de Excelencia'
-    },
-    {
-      icon: Users,
-      value: '1500+',
-      label: 'Estudiantes Matriculados'
-    },
-    {
-      icon: GraduationCap,
-      value: '120+',
-      label: 'Docentes Calificados'
+      value: '1999',
+      label: 'Inicio Académico en Cúcuta'
     },
     {
       icon: Award,
-      value: '100+',
-      label: 'Premios Ganados'
+      value: '2021–2029',
+      label: 'Acreditación MEN (Res. 015867)'
+    },
+    {
+      icon: Users,
+      value: '5',
+      label: 'Módulos Temáticos del OVA'
+    },
+    {
+      icon: GraduationCap,
+      value: '5',
+      label: 'Laboratorios Simuladores'
     },
     {
       icon: Percent,
-      value: '98%',
-      label: 'Tasa de Aprobación Universitaria'
+      value: '75%',
+      label: 'Umbral de Aprobación en Quiz'
     }
   ];
 

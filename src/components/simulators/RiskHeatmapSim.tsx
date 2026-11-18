@@ -207,7 +207,7 @@ export const RiskHeatmapSim: React.FC = () => {
           </div>
 
           {/* Color Legend */}
-          <div className="grid grid-cols-4 gap-2 pt-2 text-[11px] text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 text-[11px] text-center">
             <span className="p-1 rounded bg-emerald-100 text-[#006837] font-semibold border border-emerald-200">
               Bajo (1-4)
             </span>
@@ -215,12 +215,15 @@ export const RiskHeatmapSim: React.FC = () => {
               Moderado (5-8)
             </span>
             <span className="p-1 rounded bg-amber-100 text-amber-800 font-semibold border border-amber-200">
-              Alto (9-16)
+              Alto (9-14)
             </span>
             <span className="p-1 rounded bg-rose-100 text-rose-800 font-semibold border border-rose-200">
-              Extremo (20-25)
+              Extremo (15-25)
             </span>
           </div>
+          <p className="text-[10px] text-slate-500">
+            Nota: Escala numérica 5×5 ilustrativa; ISO 31000:2018 permite definir criterios y umbrales según el contexto organizacional.
+          </p>
         </div>
 
         {/* Right: Risk Treatment Panel */}
@@ -263,7 +266,7 @@ export const RiskHeatmapSim: React.FC = () => {
           {/* Action Decision Buttons */}
           <div className="space-y-2">
             <label className="block text-xs font-semibold text-slate-700">
-              Seleccionar Estrategia de Tratamiento ISO 31000:
+              Seleccionar Estrategia de Tratamiento (síntesis clásica / ISO 31000):
             </label>
 
             <div className="grid grid-cols-2 gap-2">

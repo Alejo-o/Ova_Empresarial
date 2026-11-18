@@ -1,63 +1,57 @@
 import React from 'react';
-import { Lightbulb, ShieldCheck, AlertTriangle, Users, RefreshCw } from 'lucide-react';
+import { BookOpen, Cpu, Briefcase, CheckSquare, Award } from 'lucide-react';
 
 interface PillarsBarProps {
-  onSelectModule: (moduleId: string) => void;
-  completedModules: string[];
+  onExploreModules: () => void;
 }
 
-export const PillarsBar: React.FC<PillarsBarProps> = ({ onSelectModule, completedModules }) => {
+export const PillarsBar: React.FC<PillarsBarProps> = ({ onExploreModules }) => {
   const pillars = [
     {
-      id: 'innovacion-design-thinking',
-      title: 'Educación Holística',
-      subtitle: 'Design Thinking',
-      desc: 'Fomentando el crecimiento académico, emocional y creativo.',
-      icon: Lightbulb
+      title: 'Teoría Fundamentada',
+      subtitle: 'Rigor Académico',
+      desc: 'Marcos conceptuales con bibliografía verificada y fuentes primarias.',
+      icon: BookOpen
     },
     {
-      id: 'ciberseguridad',
-      title: 'Docentes Expertos',
-      subtitle: 'Ciberseguridad & CIA',
-      desc: 'Formadores apasionados y dedicados a la excelencia digital.',
-      icon: ShieldCheck
+      title: 'Simuladores Prácticos',
+      subtitle: 'Aprender Haciendo',
+      desc: 'Laboratorios interactivos para experimentar escenarios de decisión.',
+      icon: Cpu
     },
     {
-      id: 'gestion-de-riesgos',
-      title: 'Aprendizaje Innovador',
-      subtitle: 'Gestión de Riesgos',
-      desc: 'Simuladores modernos y métodos pedagógicos activos.',
-      icon: AlertTriangle
+      title: 'Casos Pedagógicos',
+      subtitle: 'Análisis Crítico',
+      desc: 'Dilemas organizacionales simulados con retroalimentación inmediata.',
+      icon: Briefcase
     },
     {
-      id: 'cultura-organizacional',
-      title: 'Perspectiva Global',
-      subtitle: 'Cultura Organizacional',
-      desc: 'Preparando líderes éticos para un futuro internacional.',
-      icon: Users
+      title: 'Autoevaluación',
+      subtitle: 'Seguimiento Local',
+      desc: 'Cuestionarios formativos con umbral de aprobación del 75% por módulo.',
+      icon: CheckSquare
     },
     {
-      id: 'gestion-del-cambio',
-      title: 'Campus Seguro e Inclusivo',
-      subtitle: 'Gestión del Cambio',
-      desc: 'Un entorno seguro y guiado donde cada estudiante prospera.',
-      icon: RefreshCw
+      title: 'Sede Cúcuta',
+      subtitle: 'Identidad Unisimón',
+      desc: 'Recurso formativo universitario con acreditación institucional vigente.',
+      icon: Award
     }
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-8 -mt-8 relative z-20 no-print">
-      <div className="bg-[#00381C] text-white rounded-2xl shadow-2xl border border-emerald-900/60 p-4 sm:p-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 lg:divide-x divide-emerald-800/60">
+    <div id="pilares" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8 relative z-20 no-print">
+      <div className="bg-[#00381C] text-white rounded-2xl shadow-2xl border border-emerald-900/60 p-4 sm:p-5 lg:p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 lg:divide-x divide-emerald-800/60 gap-2 sm:gap-0">
           {pillars.map((p) => {
             const Icon = p.icon;
-            const isCompleted = completedModules.includes(p.id);
 
             return (
-              <div
-                key={p.id}
-                onClick={() => onSelectModule(p.id)}
-                className="p-3 sm:px-4 first:pl-0 last:pr-0 cursor-pointer group transition-all flex flex-col justify-between space-y-2"
+              <button
+                type="button"
+                key={p.title}
+                onClick={onExploreModules}
+                className="p-3 sm:p-4 lg:px-3 xl:px-4 lg:first:pl-0 lg:last:pr-0 cursor-pointer group transition-all flex flex-col justify-between space-y-2 text-left"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full border border-emerald-400/50 flex items-center justify-center text-emerald-300 group-hover:bg-white group-hover:text-[#00381C] transition-all shrink-0">
@@ -65,7 +59,7 @@ export const PillarsBar: React.FC<PillarsBarProps> = ({ onSelectModule, complete
                   </div>
 
                   <div className="min-w-0">
-                    <h3 className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors truncate">
+                    <h3 className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors leading-tight">
                       {p.title}
                     </h3>
                     <span className="text-[10px] text-emerald-300 block font-medium">
@@ -74,16 +68,10 @@ export const PillarsBar: React.FC<PillarsBarProps> = ({ onSelectModule, complete
                   </div>
                 </div>
 
-                <p className="text-[11px] text-emerald-100/70 leading-snug line-clamp-2">
+                <p className="text-[11px] text-emerald-100/75 leading-snug line-clamp-2">
                   {p.desc}
                 </p>
-
-                {isCompleted && (
-                  <span className="text-[9px] font-bold text-emerald-300 bg-emerald-950/80 px-1.5 py-0.5 rounded self-start">
-                    ✓ Completado
-                  </span>
-                )}
-              </div>
+              </button>
             );
           })}
         </div>

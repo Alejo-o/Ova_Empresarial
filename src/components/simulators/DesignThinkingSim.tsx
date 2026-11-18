@@ -327,30 +327,30 @@ export const DesignThinkingSim: React.FC = () => {
       {activeStage === 4 && (
         <div className="space-y-4">
           <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100 text-sm text-[#0F2417]">
-            <strong className="text-[#006837]">Fase 4: Prototipado Rápido.</strong> Visualiza la maqueta interactiva simplificada del servicio (Bot de WhatsApp Unisimón con descarga en 1 clic):
+            <strong className="text-[#006837]">Fase 4: Prototipado Rápido (Maqueta Ilustrativa).</strong> Visualiza una maqueta interactiva simplificada de un posible servicio estudiantil (prototipo simulado sin conexión real):
           </div>
 
           <div className="max-w-md mx-auto bg-slate-900 text-white rounded-2xl p-4 shadow-md space-y-3">
             <div className="flex items-center justify-between pb-3 border-b border-slate-800">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                <span className="text-xs font-semibold">Unisimón Virtual Assistant</span>
+                <span className="text-xs font-semibold">Prototipo Asistente Virtual (Demo)</span>
               </div>
-              <span className="text-[10px] text-slate-400">En línea</span>
+              <span className="text-[10px] text-slate-400">Simulación</span>
             </div>
 
             <div className="space-y-2.5 text-xs">
               <div className="bg-slate-800 p-2.5 rounded-lg max-w-[85%]">
-                Hola Alejandro, bienvenido a Unisimón Express. ¿Qué trámite deseas realizar hoy?
+                Hola estudiante (ejemplo), bienvenido al prototipo de autogestión. ¿Qué trámite deseas simular hoy?
               </div>
               <div className="bg-[#006837] text-white p-2 rounded-lg max-w-[70%] ml-auto text-right">
                 1. Descargar certificado de notas
               </div>
               <div className="bg-slate-800 p-2.5 rounded-lg max-w-[85%] border border-emerald-500/30">
-                ¡Listo! Hemos verificado tu identidad mediante token seguro. Descarga tu certificado oficial firmado digitalmente aquí:
+                ¡Listo! En este flujo simulado, tras validar la identidad del usuario se generaría el archivo de ejemplo:
                 <div className="mt-2 p-2 bg-emerald-950/80 rounded border border-emerald-600/40 text-[11px] text-emerald-300 font-mono flex items-center justify-between">
-                  <span>Certificado_Semestre_2026.pdf</span>
-                  <span className="text-xs font-bold underline cursor-pointer">Descargar</span>
+                  <span>Certificado_Ejemplo_Demo.pdf</span>
+                  <span className="text-xs font-bold underline cursor-pointer">Ejemplo UI</span>
                 </div>
               </div>
             </div>
@@ -378,7 +378,7 @@ export const DesignThinkingSim: React.FC = () => {
       {activeStage === 5 && (
         <div className="space-y-4">
           <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100 text-sm text-[#0F2417]">
-            <strong className="text-[#006837]">Fase 5: Evaluación y Aprendizaje Continuo.</strong> Presentamos el prototipo a un grupo de 20 estudiantes de jornada nocturna. Ajusta el barómetro de retroalimentación para analizar la viabilidad:
+            <strong className="text-[#006837]">Fase 5: Evaluación y Aprendizaje Continuo.</strong> En este escenario simulado de validación con 20 estudiantes de jornada nocturna, ajusta el barómetro de retroalimentación (valores ilustrativos de práctica):
           </div>
 
           <div className="p-5 bg-white border border-emerald-200 rounded-xl space-y-4">
@@ -396,18 +396,18 @@ export const DesignThinkingSim: React.FC = () => {
               className="w-full accent-[#006837]"
             />
 
-            <div className="grid grid-cols-3 gap-3 text-center text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center text-xs">
               <div className="p-3 bg-emerald-50 rounded-lg">
-                <span className="block text-[11px] text-slate-500">Deseabilidad</span>
+                <span className="block text-[11px] text-slate-500">Deseabilidad (Ejemplo)</span>
                 <span className="font-bold text-[#006837]">95% (Alta)</span>
               </div>
               <div className="p-3 bg-emerald-50 rounded-lg">
-                <span className="block text-[11px] text-slate-500">Factibilidad Técnica</span>
-                <span className="font-bold text-[#006837]">90% (API Oficial)</span>
+                <span className="block text-[11px] text-slate-500">Factibilidad Técnica (Ejemplo)</span>
+                <span className="font-bold text-[#006837]">90% (Viable)</span>
               </div>
               <div className="p-3 bg-emerald-50 rounded-lg">
-                <span className="block text-[11px] text-slate-500">Viabilidad Financiera</span>
-                <span className="font-bold text-[#006837]">Ahorro del 70%</span>
+                <span className="block text-[11px] text-slate-500">Viabilidad (Ejemplo)</span>
+                <span className="font-bold text-[#006837]">Ahorro estimado 70%</span>
               </div>
             </div>
 

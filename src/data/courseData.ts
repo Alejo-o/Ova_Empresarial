@@ -16,7 +16,7 @@ export const MODULES_DATA: ModuleData[] = [
       'Técnicas de divergencia creativa y priorización de ideas',
       'Prototipado rápido y validación experimental'
     ],
-    duration: '4 Horas Académicas',
+    duration: 'Módulo Autoguiado',
     level: 'Fundamental y Aplicado',
     iconName: 'Lightbulb',
     heroImage: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80',
@@ -26,17 +26,17 @@ export const MODULES_DATA: ModuleData[] = [
       {
         id: 'fundamentos-dt',
         title: '1. Fundamentos del Pensamiento de Diseño',
-        summary: 'Comprender el modelo de doble diamante y el ciclo iterativo de innovación centrada en el usuario.',
+        summary: 'Comprender el ciclo iterativo de 5 fases (Stanford d.school / IDEO) y su relación con el Doble Diamante (Design Council).',
         content: [
-          'El Design Thinking nació en los laboratorios de la Universidad de Stanford y la consultora IDEO como una respuesta a los métodos tradicionales de ingeniería y negocios, que a menudo diseñaban productos desde la perspectiva de la viabilidad técnica antes de consultar las necesidades reales de los seres humanos.',
-          'Esta metodología se basa en un proceso no lineal e iterativo estructurado en cinco fases complementarias: Empatizar, Definir, Idear, Prototipar y Evaluar. Su premisa fundamental es que la innovación de alto impacto surge de la intersección entre tres vectores: Deseabilidad (lo que la gente necesita), Factibilidad (lo que la tecnología permite construir) y Viabilidad (lo que hace económicamente sostenible el proyecto).'
+          'El Design Thinking fue popularizado en la Universidad de Stanford (d.school) y la consultora IDEO como un enfoque de innovación centrado en el ser humano, frente a procesos tradicionales que priorizaban la viabilidad técnica antes de comprender las necesidades reales de las personas.',
+          'El modelo de Stanford/IDEO se estructura en cinco fases no lineales e iterativas: Empatizar, Definir, Idear, Prototipar y Evaluar. Como señaló Tim Brown (IDEO, 2008-2009), la innovación sostenible surge en la intersección de tres lentes: Deseabilidad (lo que las personas necesitan), Factibilidad (lo que es técnicamente posible) y Viabilidad (lo que resulta económicamente sostenible). Como marco complementario, el British Design Council (2005) propuso el Doble Diamante en cuatro etapas (Descubrir, Definir, Desarrollar y Entregar) para explicitar ciclos de divergencia y convergencia.'
         ],
         keyPoints: [
-          'Doble Diamante: alternancia entre pensamiento divergente (explorar posibilidades) y convergente (tomar decisiones).',
-          'Enfoque Human-Centered Design: el usuario real es el centro del descubrimiento.',
-          'Cultura del fallo temprano y económico: prototipar rápido para aprender sin incurrir en costos masivos.'
+          'Doble Diamante (Design Council, 2005): modelo de 4 etapas basado en pensamiento divergente (explorar) y convergente (decidir).',
+          'Enfoque Human-Centered Design: las necesidades de las personas orientan el proceso desde el inicio.',
+          'Prototipado temprano: experimentar a baja escala antes de comprometer recursos significativos.'
         ],
-        practicalApplication: 'En el contexto caribeño y latinoamericano, el Design Thinking ha permitido a empresas de salud, fintech y educación rediseñar sus canales de atención para reducir la deserción y mejorar la accesibilidad de poblaciones diversas.'
+        practicalApplication: 'En diversos sectores de América Latina (como salud, servicios financieros y educación), el Design Thinking se emplea para diagnosticar barreras de accesibilidad y rediseñar canales de atención centrados en el usuario.'
       },
       {
         id: 'fases-empatizar-definir',
@@ -51,7 +51,7 @@ export const MODULES_DATA: ModuleData[] = [
           'El insight no es un dato estadístico; es la motivación oculta detrás de la conducta del usuario.',
           'La pregunta "¿Cómo podríamos...?" abre el espacio de soluciones sin presuponer una respuesta tecnológica fija.'
         ],
-        practicalApplication: 'Rediseño de la experiencia del estudiante universitario: al observar que los estudiantes no utilizaban la biblioteca digital, se descubrió que no era por falta de interés, sino porque las interfaces requerían 6 pasos de autenticación en dispositivos móviles lentos.'
+        practicalApplication: 'Ejemplo ilustrativo: al analizar por qué los estudiantes usaban poco una biblioteca digital desde el teléfono, la observación centrada en el usuario permite identificar flujos de autenticación extensos o pantallas no adaptadas a dispositivos móviles.'
       },
       {
         id: 'idear-prototipar-evaluar',
@@ -59,21 +59,21 @@ export const MODULES_DATA: ModuleData[] = [
         summary: 'Estrategias de co-creación, matrices de priorización impacto/esfuerzo y experimentación ágil con prototipos de baja y alta fidelidad.',
         content: [
           'La fase de ideación busca volumen y diversidad de enfoques. Técnicas como Crazy 8\'s o SCAMPER impiden que el equipo se enamore de la primera solución evidente. Posteriormente, se aplican matrices de priorización 2x2 (Impacto vs. Esfuerzo) para seleccionar las ideas más viables.',
-          'El prototipado da forma tangible a la idea: bocetos en papel, storyboards, maquetas digitales en Figma o simulaciones de servicio (roleplay). Lo esencial es que el prototipo sirva únicamente para responder una hipótesis crítica: ¿Entiende el usuario el valor de la propuesta?'
+          'El prototipado da forma tangible a la idea: bocetos en papel, storyboards, maquetas digitales o simulaciones de servicio (roleplay). Lo esencial es que el prototipo sirva para probar una hipótesis crítica: ¿comprende el usuario el valor de la propuesta?'
         ],
         keyPoints: [
           'Prototipo de baja fidelidad: menor inversión de tiempo, mayor disposición del usuario a criticar constructivamente.',
           'Pruebas de usuario: observar en silencio sin guiar ni defender el diseño.',
-          'Bucle "Construir - Medir - Aprender": iterar continuamente hasta alcanzar la solución óptima.'
+          'Bucle iterativo: probar, aprender y ajustar continuamente antes del desarrollo final.'
         ],
-        practicalApplication: 'Una universidad regional prototipó un nuevo sistema de tutorías virtuales en solo 3 días usando un grupo de WhatsApp y formularios simples antes de contratar el desarrollo de una plataforma costosa, validando previamente el interés real de los alumnos.'
+        practicalApplication: 'Ejemplo ilustrativo: antes de contratar un desarrollo complejo, un equipo académico puede validar el interés real por un servicio de tutorías usando un prototipo sencillo basado en formularios y canales de mensajería ya existentes.'
       }
     ],
     caseStudy: {
       id: 'caso-clinica-salud',
-      title: 'Caso de Estudio: Rediseño del Servicio de Teleconsulta Médica',
-      companyScenario: 'La red hospitalaria "Salud Caribe" implementó un sistema de telemedicina durante un año, pero el 65% de los pacientes adultos mayores no lograba completar sus citas virtuales, saturando las líneas de urgencias.',
-      contextBackground: 'El equipo de tecnología propuso gastar $80.000 USD en una nueva aplicación móvil con videollamadas 4K. Sin embargo, el equipo de innovación sugirió aplicar Design Thinking antes de autorizar el presupuesto.',
+      title: 'Caso Pedagógico Simulado: Rediseño del Servicio de Teleconsulta Médica',
+      companyScenario: 'En este escenario ficticio de práctica, una red hospitalaria regional implementó un sistema de telemedicina, pero la mayoría de los pacientes adultos mayores no lograba completar sus citas virtuales (ejemplo simulado: 65%).',
+      contextBackground: 'El área tecnológica propuso invertir $80.000 USD (dato hipotético del caso) en una aplicación con videollamadas 4K. El equipo de innovación propuso aplicar Design Thinking antes de aprobar el gasto.',
       dilemma: '¿Cuál es la estrategia metodológicamente correcta para abordar este problema desde el Design Thinking?',
       options: [
         {
@@ -147,7 +147,24 @@ export const MODULES_DATA: ModuleData[] = [
           'Reemplazo de trabajadores por inteligencia artificial sin análisis de impacto.'
         ],
         correctIndex: 1,
-        explanation: 'La intersección virtuosa entre Deseabilidad, Factibilidad y Viabilidad es el estándar universal de la innovación responsable.'
+        explanation: 'La intersección entre Deseabilidad, Factibilidad y Viabilidad es el marco propuesto por Tim Brown / IDEO para la innovación centrada en las personas.'
+      }
+    ],
+    references: [
+      {
+        title: 'Design Thinking / Change by Design (Deseabilidad, Factibilidad y Viabilidad)',
+        institution: 'Tim Brown · IDEO / Harvard Business Review',
+        detail: '2008–2009 · ideo.com'
+      },
+      {
+        title: 'Proceso de 5 fases de Design Thinking (Empatizar, Definir, Idear, Prototipar, Evaluar)',
+        institution: 'Stanford d.school',
+        detail: 'Marco formativo de diseño centrado en el usuario'
+      },
+      {
+        title: 'The Double Diamond (Discover, Define, Develop, Deliver)',
+        institution: 'British Design Council',
+        detail: '2005 · Modelo de divergencia y convergencia en 4 fases'
       }
     ]
   },
@@ -163,7 +180,7 @@ export const MODULES_DATA: ModuleData[] = [
       'Diseño de políticas de Zero Trust y control de identidades (IAM/MFA)',
       'Planificación de respuesta a incidentes y continuidad del negocio'
     ],
-    duration: '4 Horas Académicas',
+    duration: 'Módulo Autoguiado',
     level: 'Crítico e Intermedio',
     iconName: 'ShieldCheck',
     heroImage: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80',
@@ -190,37 +207,37 @@ export const MODULES_DATA: ModuleData[] = [
         title: '2. Vectores de Amenazas e Ingeniería Social',
         summary: 'Análisis de ataques de Phishing, Ransomware, Man-in-the-Middle y el factor humano en la seguridad.',
         content: [
-          'A pesar de los avanzados firewalls y algoritmos de inteligencia artificial, más del 85% de las brechas de seguridad exitosas involucran el factor humano. La ingeniería social manipula la psicología de las personas (urgencia, curiosidad, miedo o autoridad) para inducirlas a entregar credenciales o ejecutar software malicioso.',
-          'Entre las principales amenazas destacan:\n1. Phishing y Spear Phishing: Correos electrónicos o mensajes fraudulentos personalizados que suplantan a entidades bancarias o directivos institucionales.\n2. Ransomware: Malware que cifra la información del servidor y exige rescates millonarios para devolver la clave de descifrado.\n3. Ataques a la Cadena de Suministro: Vulneración de proveedores externos de software para acceder a la red principal.'
+          'A pesar de los controles perimetrales avanzados, el factor humano sigue siendo un vector central en la seguridad digital: según el Data Breach Investigations Report (DBIR, 2024) de Verizon, aproximadamente el 68% de las brechas analizadas involucraron el elemento humano (incluyendo errores no maliciosos, ingeniería social y uso indebido de credenciales). La ingeniería social manipula sesgos como la urgencia, la curiosidad o la autoridad para inducir a las personas a entregar accesos.',
+          'Entre las principales amenazas destacan:\n1. Phishing y Spear Phishing: Correos electrónicos o mensajes fraudulentos personalizados que suplantan a entidades bancarias o directivos institucionales.\n2. Ransomware: Malware que cifra la información del servidor y exige rescates económicos para devolver la clave de descifrado.\n3. Ataques a la Cadena de Suministro: Vulneración de proveedores externos de software para acceder a la red principal.'
         ],
         keyPoints: [
-          'Zero Trust ("Nunca confíes, siempre verifica"): ningún usuario ni dispositivo dentro o fuera del perímetro es confiable por defecto.',
-          'MFA (Autenticación Multifactor): añade una capa que bloquea el 99% de los ataques automatizados de robo de contraseña.',
-          'Copias de seguridad 3-2-1 inmutables: 3 copias, 2 medios distintos, 1 fuera de línea (air-gapped).'
+          'Zero Trust ("Nunca confíes, siempre verifica"): ningún usuario ni dispositivo dentro o fuera del perímetro es confiable por defecto (NIST SP 800-207).',
+          'MFA (Autenticación Multifactor): según investigaciones de Microsoft Security, bloquea más del 99.9% de los ataques automatizados basados en contraseñas.',
+          'Regla de respaldo 3-2-1 (Peter Krogh, 2005): 3 copias, en 2 medios distintos y 1 copia externa (off-site), recomendándose actualmente además copias fuera de línea (air-gapped) o inmutables frente a ransomware.'
         ],
-        practicalApplication: 'La implementación de campañas periódicas de simulación de phishing en instituciones educativas reduce la tasa de clics en enlaces maliciosos de un 38% a menos del 3% en solo 6 meses de entrenamiento constante.'
+        practicalApplication: 'Estudios sobre concienciación en ciberseguridad señalan que la retención del entrenamiento disminuye alrededor de los 4 a 6 meses si no existe refuerzo periódico; por ello, las instituciones educativas implementan campañas continuas de simulación y capacitación.'
       },
       {
         id: 'respuesta-incidentes',
         title: '3. Gestión y Respuesta a Incidentes de Seguridad',
-        summary: 'Protocolo de las 6 fases del NIST y continuidad operativa tras un compromiso de datos.',
+        summary: 'Marcos de respuesta a incidentes: SANS PICERL (6 fases) y NIST SP 800-61 (4 fases / alineación a CSF 2.0).',
         content: [
-          'El estándar mundial del NIST (National Institute of Standards and Technology) establece que la seguridad no consiste en preguntarse si la organización será atacada, sino cuándo ocurrirá y qué tan rápido podrá responder y recuperarse.',
-          'El ciclo de vida de respuesta a incidentes comprende:\n1. Preparación: Políticas, simulacros y herramientas de monitoreo (SIEM/EDR).\n2. Detección y Análisis: Detección temprana de anomalías en el tráfico o accesos inusuales.\n3. Contención: Aislar los servidores afectados para frenar la propagación lateral.\n4. Erradicación: Eliminar el malware y cerrar las vulnerabilidades explotadas.\n5. Recuperación: Restauración controlada de servicios desde copias limpias verificadas.\n6. Lecciones Aprendidas: Documentar la cronología para fortalecer las defensas futuras.'
+          'Los estándares internacionales como NIST SP 800-61 (cuya Rev. 2 definió 4 fases clásicas: Preparación; Detección y Análisis; Contención, Erradicación y Recuperación; y Actividad Post-Incidente, y cuya Rev. 3 se alinea con el NIST CSF 2.0) y el modelo operativo SANS PICERL parten de una premisa realista: la seguridad requiere prepararse para responder y recuperarse con rapidez ante incidentes.',
+          'En el ámbito operativo de los equipos SOC suele utilizarse el desglose de 6 fases del modelo SANS PICERL:\n1. Preparación: Políticas, simulacros y herramientas de monitoreo (SIEM/EDR).\n2. Identificación (Detección y Análisis en NIST): Detección temprana de anomalías en el tráfico o accesos inusuales.\n3. Contención: Aislar los servidores afectados para frenar la propagación lateral.\n4. Erradicación: Eliminar el malware y cerrar las vulnerabilidades explotadas.\n5. Recuperación: Restauración controlada de servicios desde copias limpias verificadas.\n6. Lecciones Aprendidas: Documentar la cronología para fortalecer las defensas futuras.'
         ],
         keyPoints: [
-          'Aislamiento de red inmediato: cortar la conectividad de los equipos comprometidos antes de reiniciar o apagar.',
+          'Aislamiento de red oportuno: cortar la conectividad de los equipos comprometidos siguiendo protocolos de respuesta antes de reiniciar.',
           'Preservación de evidencia forense para acciones legales y cumplimiento normativo (Habeas Data, GDPR).',
           'Comunicación transparente y coordinada con las partes interesadas y autoridades regulatorias.'
         ],
-        practicalApplication: 'Protocolos de aislamiento de red implementados en menos de 15 minutos evitaron que una intrusión en el servidor de correo institucional se propagara hacia el sistema central de admisiones y registro académico.'
+        practicalApplication: 'Ejemplo ilustrativo: en un escenario universitario, ejecutar protocolos tempranos de aislamiento de red ante una alerta en el servidor de correo ayuda a frenar el movimiento lateral hacia sistemas críticos como admisiones y registro académico.'
       }
     ],
     caseStudy: {
       id: 'caso-phishing-banco',
-      title: 'Caso de Estudio: El Falso Correo de la Rectoría',
-      companyScenario: 'El lunes a las 8:00 AM, 150 docentes y directivos de la institución recibieron un correo urgente con asunto: "URGENTE: Actualización del Bono Docente y Nómina Semestral", que incluía un enlace a una página idéntica al portal universitario solicitando usuario y contraseña.',
-      contextBackground: 'Varios funcionarios ingresaron sus credenciales. Dos horas más tarde, el atacante utilizó esas cuentas para acceder a la base de datos de calificaciones y solicitar transferencias desde la tesorería.',
+      title: 'Caso Pedagógico Simulado: El Falso Correo Institucional',
+      companyScenario: 'En este escenario ficticio de práctica, el lunes a las 8:00 AM un grupo de 150 docentes y directivos recibió un correo apócrifo con asunto urgente sobre nómina, incluyendo un enlace a una página que imitaba el portal institucional.',
+      contextBackground: 'En el supuesto del ejercicio, varios usuarios ingresaron sus credenciales y dos horas después el atacante intentó acceder a sistemas internos y solicitar transferencias.',
       dilemma: '¿Cuál es la respuesta de contención prioritaria e inmediata que debe ejecutar el equipo de seguridad informática?',
       options: [
         {
@@ -294,7 +311,29 @@ export const MODULES_DATA: ModuleData[] = [
           'Usar 1 único disco duro externo para toda la empresa.'
         ],
         correctIndex: 1,
-        explanation: 'Tener una copia externa o "air-gapped" (desconectada) asegura que, si un ransomware cifra la red corporativa entera, exista un respaldo limpio intacto para restaurar las operaciones.'
+        explanation: 'En la regla 3-2-1 de Peter Krogh (2005), el "1" exige al menos una copia en una ubicación externa (off-site); frente a ransomware actual se recomienda además que esté fuera de línea (air-gapped) o sea inmutable.'
+      }
+    ],
+    references: [
+      {
+        title: 'Data Breach Investigations Report (DBIR) 2024 (~68% elemento humano)',
+        institution: 'Verizon Business',
+        detail: '2024 · verizon.com'
+      },
+      {
+        title: 'Efectividad de la Autenticación Multifactor (>99.9% en ataques automatizados)',
+        institution: 'Microsoft Security',
+        detail: 'Investigación de seguridad de identidades · microsoft.com'
+      },
+      {
+        title: 'SP 800-61 (Rev. 2 en 4 fases / Rev. 3 CSF 2.0) y Modelo PICERL en 6 fases',
+        institution: 'NIST / SANS Institute',
+        detail: 'nist.gov'
+      },
+      {
+        title: 'Regla de respaldo 3-2-1 (The DAM Book)',
+        institution: 'Peter Krogh',
+        detail: '2005 · Estrategia de copias en medios y ubicaciones externas'
       }
     ]
   },
@@ -310,7 +349,7 @@ export const MODULES_DATA: ModuleData[] = [
       'Selección de estrategias de tratamiento: Mitigar, Transferir, Evitar o Aceptar',
       'Definición de Indicadores Clave de Riesgo (KRI) y planes de continuidad'
     ],
-    duration: '4 Horas Académicas',
+    duration: 'Módulo Autoguiado',
     level: 'Estratégico y Gerencial',
     iconName: 'AlertTriangle',
     heroImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
@@ -322,51 +361,51 @@ export const MODULES_DATA: ModuleData[] = [
         title: '1. Fundamentos y Principios de la Gestión de Riesgos',
         summary: 'El riesgo como efecto de la incertidumbre sobre los objetivos organizacionales según la norma ISO 31000.',
         content: [
-          'Históricamente, el riesgo se asociaba únicamente con pérdidas o desgracias financieras. La norma internacional ISO 31000 redefine el riesgo como "el efecto de la incertidumbre sobre los objetivos". Esto significa que el riesgo tiene dos dimensiones: la amenaza (que debe ser prevenida o minimizada) y la oportunidad (que puede ser aprovechada si se gestiona con rigor).',
-          'Una gestión de riesgos madura no busca el "riesgo cero" (lo cual paralizaría toda actividad empresarial), sino alinear la exposición de la entidad con su Apetito de Riesgo: la cantidad y tipo de riesgo que una organización está dispuesta a asumir en la consecución de sus metas estratégicas.'
+          'La norma internacional ISO 31000:2018 (numeral 3.1) define el riesgo como "el efecto de la incertidumbre sobre los objetivos". Esto implica que el riesgo representa una desviación respecto a lo previsto —positiva, negativa o ambas— abarcando tanto amenazas como oportunidades.',
+          'Una gestión de riesgos madura no busca el "riesgo cero" (lo cual paralizaría la actividad organizacional), sino alinear la exposición de la entidad con sus criterios de riesgo y su apetito de riesgo: la cantidad y tipo de riesgo que una organización está dispuesta a asumir en la consecución de sus metas estratégicas.'
         ],
         keyPoints: [
           'El riesgo es inherente a la toma de decisiones estratégicas.',
           'Apetito de Riesgo vs. Tolerancia al Riesgo: límites claros fijados por la alta dirección.',
           'La gestión de riesgos debe integrarse en la cultura de gobierno y no ser un mero ejercicio de auditoría formal.'
         ],
-        practicalApplication: 'Una institución de educación superior evalúa el riesgo de abrir un nuevo programa académico virtual: analiza la demanda de mercado, la capacidad tecnológica de los servidores, el cumplimiento de registros calificados y la disponibilidad docente.'
+        practicalApplication: 'Ejemplo ilustrativo: al evaluar la apertura de un programa virtual, una institución de educación superior analiza la demanda esperada, la capacidad tecnológica de sus plataformas, los requisitos normativos y la disponibilidad docente.'
       },
       {
         id: 'evaluacion-matriz-calor',
         title: '2. Evaluación y Calificación: La Matriz de Calor 5x5',
         summary: 'Metodología cualitativa y semi-cuantitativa para estimar Probabilidad e Impacto.',
         content: [
-          'La herramienta universal por excelencia en los comités de riesgo es la Matriz de Probabilidad e Impacto 5x5. Cada evento de riesgo se califica en dos ejes fundamentales:\n• Probabilidad (1: Raro, 2: Improbable, 3: Posible, 4: Probable, 5: Casi Seguro).\n• Impacto (1: Insignificante, 2: Menor, 3: Moderado, 4: Mayor, 5: Catastrófico).',
-          'El Nivel de Riesgo Inherente es el producto de ambos factores (Severidad = Probabilidad × Impacto), generando una puntuación del 1 al 25 categorizada en 4 zonas cromáticas:\n- Verde (1 a 4): Riesgo Bajo o Aceptable.\n- Amarillo (5 a 9): Riesgo Moderado (Monitoreo regular).\n- Naranja (10 a 16): Riesgo Alto (Planes de mitigación obligatorios a corto plazo).\n- Rojo (20 a 25): Riesgo Extremo o Crítico (Acción ejecutiva inmediata y contingencia).'
+          'Una herramienta habitual en los comités de riesgo es la Matriz de Probabilidad e Impacto 5x5. Cada evento se califica de forma semi-cuantitativa en dos ejes:\n• Probabilidad (1: Raro, 2: Improbable, 3: Posible, 4: Probable, 5: Casi Seguro).\n• Impacto (1: Insignificante, 2: Menor, 3: Moderado, 4: Mayor, 5: Catastrófico).',
+          'Aunque ISO 31000:2018 no impone una escala única ni umbrales numéricos fijos, en este laboratorio se adopta una convención ilustrativa de Severidad (Probabilidad × Impacto) del 1 al 25 organizada en cuatro zonas:\n- Verde (1 a 4): Riesgo Bajo o Aceptable.\n- Amarillo (5 a 8): Riesgo Moderado (Monitoreo regular).\n- Naranja (9 a 14): Riesgo Alto (Planes de mitigación obligatorios a corto plazo).\n- Rojo (15 a 25): Riesgo Extremo o Crítico (Acción ejecutiva inmediata y contingencia).'
         ],
         keyPoints: [
           'Riesgo Inherente: el nivel de riesgo antes de aplicar controles preventivos.',
           'Riesgo Residual: el nivel de riesgo remanente tras la aplicación eficaz de los controles.',
           'La matriz debe actualizarse dinámicamente frente a cambios económicos, climáticos o tecnológicos.'
         ],
-        practicalApplication: 'El riesgo de apagones prolongados en la costa caribeña: antes de tener generadores eléctricos (Riesgo Inherente = 5 × 4 = 20, Crítico). Tras instalar plantas solares y baterías industriales de respaldo (Riesgo Residual = 2 × 2 = 4, Aceptable).'
+        practicalApplication: 'Ejemplo ilustrativo en Norte de Santander: el riesgo de interrupciones eléctricas prolongadas puede tener una severidad inherente crítica sin respaldo (5 × 4 = 20) y reducirse a un nivel residual bajo tras implementar sistemas de respaldo energético (2 × 2 = 4).'
       },
       {
         id: 'estrategias-tratamiento',
         title: '3. Estrategias de Tratamiento y Respuesta al Riesgo',
-        summary: 'Las 4 decisiones tácticas: Mitigar, Transferir, Evitar o Aceptar.',
+        summary: 'Síntesis clásica de 4 decisiones (Mitigar, Transferir, Evitar, Aceptar) y las 7 opciones de ISO 31000:2018 (6.5.2).',
         content: [
-          'Una vez evaluado el riesgo, la organización debe seleccionar la estrategia más costo-eficiente entre cuatro opciones universales:\n1. Mitigar (Reducir): Implementar controles internos, procedimientos redundantes o capacitación para bajar la probabilidad o el impacto.\n2. Transferir (Compartir): Trasladar el impacto financiero a un tercero mediante pólizas de seguros, garantías o contratos con proveedores especializados.\n3. Evitar: Decidir no iniciar o cancelar la actividad que genera el riesgo si este supera la capacidad de absorción de la empresa.\n4. Aceptar (Retener): Asumir conscientemente las consecuencias de eventos de bajo impacto cuyos costos de mitigación superarían las pérdidas potenciales.'
+          'Una vez analizado el riesgo, la organización selecciona opciones de tratamiento equilibrando costos, esfuerzos y beneficios. La síntesis operativa clásica (COSO ERM / PMI) resume cuatro estrategias frecuentes, que se integran dentro de las siete opciones detalladas en el numeral 6.5.2 de la norma ISO 31000:2018 (que además contempla aceptar un riesgo para perseguir una oportunidad y eliminar la fuente de riesgo):\n1. Mitigar (Cambiar probabilidad o consecuencias): Implementar controles internos, procedimientos redundantes o capacitación.\n2. Transferir (Compartir el riesgo): Distribuir el impacto con un tercero mediante pólizas de seguros, garantías o acuerdos contractuales.\n3. Evitar: Decidir no iniciar o descontinuar la actividad que genera el riesgo.\n4. Aceptar (Retener de forma informada): Asumir conscientemente las consecuencias cuando los criterios de riesgo lo justifican.'
         ],
         keyPoints: [
-          'Relación costo-beneficio del control: nunca invertir $10.000 para mitigar un riesgo potencial de $2.000.',
+          'Relación costo-beneficio del control: toda medida de tratamiento debe justificar su costo frente al objetivo protegido (ISO 31000:2018).',
           'Controles Preventivos (actúan antes del evento) vs. Controles Correctivos (actúan después para restablecer el orden).',
           'KRI (Key Risk Indicators): alertas tempranas que avisan cuando un riesgo está a punto de materializarse.'
         ],
-        practicalApplication: 'Para proteger el archivo digital histórico de la universidad: se contrata una póliza contra desastres naturales (Transferir), se habilitan réplicas en la nube cifradas (Mitigar) y se prohíbe el ingreso de líquidos a la sala de servidores (Evitar).'
+        practicalApplication: 'Ejemplo ilustrativo: para proteger un archivo digital institucional se combinan opciones de tratamiento: póliza frente a siniestros (Compartir/Transferir), réplicas cifradas en la nube (Reducir) y restricción de líquidos en salas técnicas (Evitar).'
       }
     ],
     caseStudy: {
       id: 'caso-cadena-suministro',
-      title: 'Caso de Estudio: Dependencia Crítica de un Proveedor Único',
-      companyScenario: 'La institución contrató a un único proveedor tecnológico internacional para alojar toda la infraestructura de matrícula y pagos en línea. En el contrato no se especificó un acuerdo de nivel de servicio (SLA) con penalidades ni cláusulas de respaldo redundante en otra región.',
-      contextBackground: 'Tres días antes de finalizar el plazo de matrículas, el centro de datos del proveedor en el extranjero sufre una inundación que deja el servicio inoperativo por 72 horas.',
+      title: 'Caso Pedagógico Simulado: Dependencia Crítica de un Proveedor Único',
+      companyScenario: 'En este escenario hipotético, una institución contrató a un único proveedor para alojar su plataforma de matrículas en línea sin exigir acuerdos de nivel de servicio (SLA) con penalidades ni redundancia geográfica.',
+      contextBackground: 'En el supuesto del ejercicio, tres días antes del cierre de matrículas una falla grave en el centro de datos del proveedor deja el servicio inoperativo por 72 horas.',
       dilemma: '¿Qué error de gestión de riesgos se cometió y cuál es la medida correctiva estructural adecuada?',
       options: [
         {
@@ -440,7 +479,19 @@ export const MODULES_DATA: ModuleData[] = [
           'Eliminar la probabilidad del evento.'
         ],
         correctIndex: 1,
-        explanation: 'Transferir el riesgo traslada el impacto económico a un tercero (la compañía aseguradora) a cambio de una prima periódica.'
+        explanation: 'Transferir o compartir el riesgo traslada o distribuye el impacto económico con un tercero (como una aseguradora) conforme al numeral 6.5.2 de ISO 31000:2018.'
+      }
+    ],
+    references: [
+      {
+        title: 'Norma Internacional ISO 31000:2018 — Gestión del riesgo (numeral 3.1 y 6.5.2)',
+        institution: 'Organización Internacional de Normalización (ISO)',
+        detail: '2018 · Definición de riesgo y 7 opciones de tratamiento'
+      },
+      {
+        title: 'Marco clásico de 4 respuestas al riesgo (Mitigar, Transferir, Evitar, Aceptar)',
+        institution: 'COSO ERM / Project Management Institute (PMI)',
+        detail: 'Síntesis operativa compatible con ISO 31000'
       }
     ]
   },
@@ -456,7 +507,7 @@ export const MODULES_DATA: ModuleData[] = [
       'Desarrollo de liderazgo transformacional y seguridad psicológica',
       'Alineación entre estrategia corporativa, cultura vivida y bienestar'
     ],
-    duration: '4 Horas Académicas',
+    duration: 'Módulo Autoguiado',
     level: 'Humano y Estratégico',
     iconName: 'Users',
     heroImage: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
@@ -468,8 +519,8 @@ export const MODULES_DATA: ModuleData[] = [
         title: '1. Los Tres Niveles de la Cultura según Edgar Schein',
         summary: 'Descifrar lo visible y lo invisible en el comportamiento colectivo de una institución.',
         content: [
-          'El sociólogo de MIT Edgar Schein definió la cultura como el patrón de supuestos básicos compartidos que una organización aprendió al resolver sus problemas de adaptación externa e integración interna, y que funciona tan bien como para ser transmitido a los nuevos miembros como la manera correcta de percibir, pensar y sentir.',
-          'Schein propuso el modelo del iceberg cultural con tres niveles de profundidad:\n1. Artefactos (Visible): La arquitectura de las oficinas, el código de vestimenta, los rituales de bienvenida, el lenguaje cotidiano y las herramientas tecnológicas.\n2. Valores Espoleados o Declarados (Consciente): La misión, visión, código de ética y principios corporativos publicados en la pared o página web.\n3. Supuestos Básicos Subyacentes (Invisible e Inconsciente): Creencias profundas no cuestionadas sobre la naturaleza humana, el poder, el tiempo y el éxito.'
+          'El psicólogo organizacional del MIT Edgar Schein definió la cultura como el patrón de supuestos básicos compartidos que un grupo aprendió al resolver sus problemas de adaptación externa e integración interna, y que funciona lo suficientemente bien como para enseñarse a los nuevos miembros como la manera correcta de percibir, pensar y sentir.',
+          'Schein propuso tres niveles de análisis cultural:\n1. Artefactos (Visible): La arquitectura de las oficinas, el código de vestimenta, los rituales, el lenguaje cotidiano y las herramientas visibles.\n2. Valores Adoptados o Declarados (Espoused Values - Consciente): La misión, visión, código de ética y principios declarados por la organización.\n3. Supuestos Básicos Subyacentes (Invisible e Inconsciente): Creencias profundas no cuestionadas sobre la naturaleza humana, el poder, el tiempo y el éxito.'
         ],
         keyPoints: [
           'La cultura no es lo que los líderes dicen en sus discursos, sino lo que premian, toleran y castigan con sus actos.',
@@ -497,22 +548,22 @@ export const MODULES_DATA: ModuleData[] = [
         title: '3. El Rol del Liderazgo y la Cohesión de Equipos',
         summary: 'Cómo los líderes moldean la cultura mediante el modelado de conductas, el reconocimiento y la retroalimentación continua.',
         content: [
-          'Peter Drucker acuñó la famosa sentencia: "La cultura se come a la estrategia en el desayuno". Si la estrategia dice una cosa pero la cultura organizacional empuja en sentido contrario, la estrategia fracasará invariablemente.',
-          'El liderazgo transformacional inspira a los colaboradores elevando su sentido de propósito por encima de los intereses particulares. Los líderes moldean la cultura a través de cinco mecanismos primarios de anclaje: a qué le prestan atención y miden con regularidad, cómo reaccionan ante situaciones de crisis, cómo asignan los recursos escasos, a quién contratan o ascienden, y a quién dejan partir de la organización.'
+          'La célebre frase "La cultura se come a la estrategia en el desayuno" —popularizada en el ámbito ejecutivo por Mark Fields en Ford alrededor de 2006 y documentada desde el año 2000 en publicaciones de Giga Information Group, aunque atribuida con frecuencia erróneamente a Peter Drucker— sintetiza una idea clave: si la cultura cotidiana empuja en dirección contraria al plan estratégico, este último no se ejecutará.',
+          'El liderazgo transformacional fortalece el propósito compartido. De acuerdo con Edgar Schein, los líderes transmiten y consolidan la cultura mediante seis (6) mecanismos primarios de anclaje: (1) a qué prestan atención, miden y controlan regularmente; (2) cómo reaccionan ante incidentes críticos y crisis; (3) cómo asignan recursos; (4) el modelado deliberado de conductas, la enseñanza y el coaching; (5) los criterios con que asignan recompensas y estatus; y (6) los criterios de reclutamiento, selección, promoción y desvinculación.'
         ],
         keyPoints: [
           'Liderazgo servicial: el líder como facilitador de barreras y habilitador de talento.',
-          'Rituales y narrativas: las historias de éxito heroico que se cuentan en la empresa refuerzan los comportamientos deseados.',
-          'Medición continua del Clima Laboral: encuestas de pulso e índices de eNPS (Employee Net Promoter Score).'
+          'Rituales y narrativas: las historias institucionales compartidas refuerzan los comportamientos esperados.',
+          'Medición continua del clima organizacional: encuestas de pulso e índices de retroalimentación.'
         ],
-        practicalApplication: 'Instituir reuniones semanales donde los directivos comparten abiertamente un fracaso propio y lo que aprendieron de él normaliza la cultura del aprendizaje y la humildad en toda la plantilla universitaria.'
+        practicalApplication: 'Ejemplo ilustrativo: habilitar espacios periódicos de análisis sin represalias donde equipos directivos y docentes revisan lecciones aprendidas de proyectos piloto fortalece la seguridad psicológica y la mejora continua.'
       }
     ],
     caseStudy: {
       id: 'caso-fusion-empresarial',
-      title: 'Caso de Estudio: El Choque Cultural en una Fusión Tecnológica',
-      companyScenario: 'Una consultora tradicional con 30 años de trayectoria (Cultura fuertemente Jerárquica, estricto código de vestimenta, memorandos formales) adquirió una startup de desarrollo de software ágil (Cultura de Adhocracia, trabajo remoto flexible, toma de decisiones descentralizada).',
-      contextBackground: 'Tras tres meses, el 40% de los mejores ingenieros de la startup renunció, argumentando que los nuevos procesos de aprobación burocráticos de 5 firmas para cada cambio de código hacían imposible trabajar con agilidad.',
+      title: 'Caso Pedagógico Simulado: El Choque Cultural en una Fusión Tecnológica',
+      companyScenario: 'En este escenario ficticio de estudio, una firma tradicional con 30 años de trayectoria (Cultura Jerárquica) adquirió una startup de desarrollo ágil (Cultura de Adhocracia).',
+      contextBackground: 'En la simulación planteada, tras tres meses el 40% del equipo técnico de la startup renunció debido a la imposición de flujos burocráticos de cinco firmas para cada cambio de código.',
       dilemma: '¿Cómo debe intervenir la dirección para retener el talento y armonizar la cultura organizacional?',
       options: [
         {
@@ -574,7 +625,7 @@ export const MODULES_DATA: ModuleData[] = [
           'Exigir exámenes psicométricos mensuales obligatorios.'
         ],
         correctIndex: 1,
-        explanation: 'La seguridad psicológica es el predictor número uno del alto rendimiento en equipos: cuando las personas no temen parecer vulnerables o ignorantes, la innovación florece.'
+        explanation: 'De acuerdo con el estudio Project Aristotle de Google —apoyado en el concepto de seguridad psicológica formulado por Amy Edmondson (1999)—, esta dinámica resultó ser el predictor número uno del desempeño efectivo en equipos.'
       },
       {
         id: 'q4-cultura',
@@ -586,7 +637,29 @@ export const MODULES_DATA: ModuleData[] = [
           'Porque la cultura no tiene relación alguna con los resultados financieros de la empresa.'
         ],
         correctIndex: 1,
-        explanation: 'Los hábitos, creencias y dinámicas culturales cotidianas siempre prevalecerán sobre los objetivos teóricos fijados en un documento estratégico si no se gestionan en sincronía.'
+        explanation: 'Los hábitos, creencias y dinámicas culturales cotidianas prevalecerán sobre los objetivos teóricos fijados en un documento estratégico si no se gestionan en sincronía.'
+      }
+    ],
+    references: [
+      {
+        title: 'Organizational Culture and Leadership (3 niveles y 6 mecanismos primarios de anclaje)',
+        institution: 'Edgar H. Schein · MIT',
+        detail: 'Marco clásico de análisis cultural'
+      },
+      {
+        title: 'Diagnosing and Changing Organizational Culture (Modelo OCAI)',
+        institution: 'Kim S. Cameron & Robert E. Quinn',
+        detail: 'Marco de Valores en Competencia (Clan, Adhocracia, Mercado, Jerarquía)'
+      },
+      {
+        title: 'Seguridad psicológica en equipos y Project Aristotle',
+        institution: 'Amy Edmondson (Harvard Business School, 1999) / Google',
+        detail: 'hbs.edu'
+      },
+      {
+        title: 'Origen de la frase "Culture eats strategy for breakfast"',
+        institution: 'Quote Investigator (Giga Information Group, 2000; Mark Fields, 2006)',
+        detail: 'quoteinvestigator.com'
       }
     ]
   },
@@ -602,7 +675,7 @@ export const MODULES_DATA: ModuleData[] = [
       'Identificación y neutralización constructiva de fuentes de resistencia al cambio',
       'Diseño de planes de comunicación estratégica y victorias a corto plazo (Quick Wins)'
     ],
-    duration: '4 Horas Académicas',
+    duration: 'Módulo Autoguiado',
     level: 'Transformacional y Avanzado',
     iconName: 'RefreshCw',
     heroImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
@@ -612,32 +685,32 @@ export const MODULES_DATA: ModuleData[] = [
       {
         id: 'modelo-8-pasos-kotter',
         title: '1. El Modelo de los 8 Pasos de John Kotter',
-        summary: 'La hoja de ruta clásica de Harvard Business School para liderar transformaciones estratégicas.',
+        summary: 'La hoja de ruta de John Kotter (1996) para liderar transformaciones estratégicas.',
         content: [
-          'El profesor John Kotter de Harvard identificó que más del 70% de las grandes iniciativas de cambio organizacional fracasan porque las organizaciones intentan ejecutar el cambio técnico antes de preparar emocional y culturalmente a la gente.',
-          'Kotter estructura el proceso en 8 fases secuenciales divididas en tres grandes etapas:\n• Crear el Clima para el Cambio:\n  1. Crear Sentido de Urgencia: demostrar por qué el statu quo ya no es una opción viable.\n  2. Formar una Coalición Conductora Potente: reunir líderes con credibilidad, autoridad y energía.\n  3. Desarrollar una Visión Estratégica e Iniciativas: pintar con claridad el destino deseado.\n• Comprometer y Habilitar a Toda la Organización:\n  4. Comunicar la Visión de Forma Masiva y Recurrente: multiplicar por diez los canales de diálogo.\n  5. Empoderar para la Acción Eliminando Obstáculos: remover políticas obsoletas y barreras burocráticas.\n  6. Generar Victorias a Corto Plazo (Quick Wins): celebrar logros visibles y tangibles en los primeros 90 días.\n• Consolidar y Sostener el Cambio:\n  7. Consolidar los Avances y Producir Más Cambio: no cantar victoria antes de tiempo.\n  8. Anclar los Nuevos Enfoques en la Cultura: institucionalizar las nuevas prácticas.'
+          'En su libro Leading Change (1996), el profesor de Harvard Business School John Kotter advirtió que muchas transformaciones organizacionales tropiezan o pierden impulso cuando se omiten fases esenciales de preparación cultural y liderazgo (aunque en la literatura gerencial se popularizó atribuir una tasa exacta del "70% de fracaso", estudios académicos como el de Mark Hughes en 2011 demostraron que dicha cifra carece de evidencia empírica sólida).',
+          'Kotter estructura el proceso en 8 fases secuenciales divididas en tres grandes etapas:\n• Crear el Clima para el Cambio:\n  1. Crear Sentido de Urgencia: demostrar por qué el statu quo ya no es una opción viable.\n  2. Formar una Coalición Conductora Potente: reunir líderes con credibilidad, autoridad y energía.\n  3. Desarrollar una Visión Estratégica e Iniciativas: pintar con claridad el destino deseado.\n• Comprometer y Habilitar a Toda la Organización:\n  4. Comunicar la Visión de Forma Masiva y Recurrente: multiplicar los canales de diálogo.\n  5. Empoderar para la Acción Eliminando Obstáculos: remover políticas obsoletas y barreras burocráticas.\n  6. Generar Victorias a Corto Plazo (Quick Wins): celebrar logros visibles y tangibles tempranos.\n• Consolidar y Sostener el Cambio:\n  7. Consolidar los Avances y Producir Más Cambio: no cantar victoria antes de tiempo.\n  8. Anclar los Nuevos Enfoques en la Cultura: institucionalizar las nuevas prácticas.'
         ],
         keyPoints: [
           'Sentido de Urgencia ≠ Miedo o Estrés: es la convicción compartida de que actuar hoy es imperativo.',
-          'Quick Wins: victorias tempranas e indiscutibles que silencian el escepticismo inicial.',
-          'El error fatal número 1 según Kotter es saltar directamente al paso 5 o cantar victoria prematuramente en el paso 6.'
+          'Quick Wins: victorias tempranas y verificables que reducen el escepticismo inicial.',
+          'Un error frecuente señalado por Kotter es omitir los pasos iniciales de clima o declarar victoria prematuramente antes de consolidar el cambio.'
         ],
-        practicalApplication: 'La migración de una universidad hacia plataformas en la nube: en lugar de exigir el uso obligatorio el día uno, se entrenó a un grupo selecto de docentes influyentes (coalición conductora) que mostraron cómo calificar exámenes en la mitad del tiempo (quick win), inspirando orgánicamente al resto.'
+        practicalApplication: 'Ejemplo ilustrativo: en una migración hacia nuevas plataformas académicas, formar primero a un grupo piloto de docentes influyentes que muestren mejoras concretas en su labor diaria facilita la adopción progresiva.'
       },
       {
         id: 'curva-del-cambio',
         title: '2. La Psicología de la Resistencia y la Curva de Transición',
-        summary: 'Comprensión de las etapas emocionales: Negación, Resistencia, Exploración y Compromiso.',
+        summary: 'Adaptación gerencial de las etapas emocionales: Negación, Resistencia, Exploración y Compromiso.',
         content: [
-          'La resistencia al cambio no es rebeldía ni pereza; es una respuesta biológica y psicológica natural ante la pérdida de control, la amenaza al estatus o la incertidumbre sobre la propia competencia.',
-          'Inspirada en el modelo de Elizabeth Kübler-Ross, la Curva del Cambio describe cuatro estaciones emocionales por las que transitan las personas:\n1. Negación: "Esto es una moda pasajera, ya volveremos a como se hacía antes".\n2. Resistencia / Enojo: Quejas, frustración activa y apego a los viejos hábitos.\n3. Exploración / Valle de la Esperanza: Primeros intentos de interactuar con la nueva realidad y descubrimiento de beneficios.\n4. Compromiso: Integración natural de la nueva metodología en la rutina diaria.'
+          'La resistencia al cambio no equivale necesariamente a rebeldía; suele ser una reacción natural frente a la pérdida de control, el temor a perder competencia o la incertidumbre.',
+          'En gestión del cambio suele emplearse una curva de transición de cuatro estaciones (Negación, Resistencia/Enojo, Exploración y Compromiso) adaptada a partir del modelo original de cinco etapas del duelo formulado por la psiquiatra Elisabeth Kübler-Ross en 1969 (On Death and Dying: negación, ira, negociación, depresión y aceptación):\n1. Negación: "Esto es pasajero, volveremos a como se hacía antes".\n2. Resistencia / Enojo: Frustración activa y apego a los hábitos conocidos.\n3. Exploración: Primeros intentos de interactuar con la nueva realidad.\n4. Compromiso: Integración natural de la nueva metodología en la rutina diaria.'
         ],
         keyPoints: [
-          'El rol del líder no es reprimir la resistencia, sino escuchar los miedos legítimos que la originan.',
-          'Las personas no se resisten al cambio; se resisten a ser cambiadas sin ser escuchadas.',
-          'Velocidades asimétricas: los líderes suelen ir meses adelante en la curva que sus equipos operativos.'
+          'El rol del líder no es reprimir la resistencia, sino escuchar las inquietudes legítimas que la originan.',
+          'La participación temprana reduce la percepción de imposición unilateral.',
+          'Velocidades asimétricas: quienes diseñan el cambio suelen transitar la curva antes que los equipos operativos.'
         ],
-        practicalApplication: 'Durante la implementación de un nuevo sistema de evaluación docente, crear mesas de escucha y talleres de práctica sin consecuencias en la calificación reduce el tiempo de resistencia en un 60%.'
+        practicalApplication: 'Ejemplo ilustrativo: habilitar mesas de escucha y talleres de práctica acompañados durante la adopción de un nuevo sistema académico ayuda a reducir la incertidumbre y facilita el tránsito hacia la etapa de exploración.'
       },
       {
         id: 'comunicacion-estrategica',
@@ -652,14 +725,14 @@ export const MODULES_DATA: ModuleData[] = [
           'Alinear incentivos y reconocimientos formales con las conductas que el cambio promueve.',
           'El cambio exitoso concluye cuando la nueva forma de trabajar deja de llamarse "el proyecto nuevo" y pasa a ser simplemente "la forma en que hacemos las cosas aquí".'
         ],
-        practicalApplication: 'Publicar testimonios de estudiantes y profesores contando en video cómo una nueva herramienta les devolvió tiempo para investigar convirtió a los detractores iniciales en los mayores promotores del cambio institucional.'
+        practicalApplication: 'Ejemplo ilustrativo: compartir testimonios reales de pares (docentes y estudiantes) explicando cómo una nueva herramienta facilita su labor cotidiana suele reducir el escepticismo inicial de otros equipos.'
       }
     ],
     caseStudy: {
       id: 'caso-transformacion-academica',
-      title: 'Caso de Estudio: La Digitalización Forzada del Currículo',
-      companyScenario: 'La decanatura anunció mediante una circular por correo electrónico que a partir del siguiente lunes quedaba terminantemente prohibido usar papel y que todas las evaluaciones debían realizarse en una nueva plataforma LMS que el 80% de los docentes nunca había utilizado.',
-      contextBackground: 'El resultado fue el caos: protestas del profesorado, calificaciones perdidas y solicitudes masivas de renuncia por estrés.',
+      title: 'Caso Pedagógico Simulado: La Digitalización Forzada del Currículo',
+      companyScenario: 'En este escenario hipotético de análisis, la decanatura anunció por correo que desde el lunes siguiente quedaba prohibido el papel y que todas las evaluaciones pasarían de inmediato a una plataforma LMS desconocida para el 80% del profesorado.',
+      contextBackground: 'En el supuesto del ejercicio, la falta de preparación provocó inconformidad docente, errores operativos y retrasos en el registro académico.',
       dilemma: '¿Cuál fue el fallo metodológico principal y cómo debió haberse gestionado según Kotter?',
       options: [
         {
@@ -733,7 +806,24 @@ export const MODULES_DATA: ModuleData[] = [
           'Cuando se gasta la totalidad del presupuesto asignado a la consultoría externa.'
         ],
         correctIndex: 1,
-        explanation: 'El paso 8 de Kotter establece que el cambio solo perdura cuando echa raíces en la cultura: cuando se convierte en "la manera natural en que hacemos las cosas aquí".'
+        explanation: 'El paso 8 de Kotter (1996) establece que el cambio perdura cuando se institucionaliza en la cultura cotidiana de la organización.'
+      }
+    ],
+    references: [
+      {
+        title: 'Leading Change (Modelo de los 8 pasos para la transformación)',
+        institution: 'John P. Kotter · Harvard Business School Press',
+        detail: '1996 · kotterinc.com / hbs.edu'
+      },
+      {
+        title: 'Do 70 per cent of all organizational change initiatives really fail?',
+        institution: 'Mark Hughes · Journal of Change Management',
+        detail: '2011 · Revisión crítica sobre la ausencia de respaldo empírico del mito del 70%'
+      },
+      {
+        title: 'On Death and Dying (Modelo original de 5 etapas del duelo)',
+        institution: 'Elisabeth Kübler-Ross',
+        detail: '1969 · Base de las adaptaciones gerenciales de la curva de transición'
       }
     ]
   }

@@ -56,6 +56,11 @@ export interface ModuleData {
   sections: LessonSection[];
   caseStudy: CaseStudy;
   quiz: QuizQuestion[];
+  references?: {
+    title: string;
+    institution: string;
+    detail: string;
+  }[];
 }
 
 export interface UserProgress {

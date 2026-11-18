@@ -26,6 +26,7 @@ interface ModuleViewerProps {
   savedScore?: number;
   onNextModule?: () => void;
   hasNextModule?: boolean;
+  onOpenCertificate?: () => void;
 }
 
 export const ModuleViewer: React.FC<ModuleViewerProps> = ({
@@ -35,7 +36,8 @@ export const ModuleViewer: React.FC<ModuleViewerProps> = ({
   isCompleted,
   savedScore,
   onNextModule,
-  hasNextModule
+  hasNextModule,
+  onOpenCertificate
 }) => {
   const [activeTab, setActiveTab] = useState<'teoria' | 'caso' | 'simulador' | 'quiz'>('teoria');
 
@@ -226,11 +228,26 @@ export const ModuleViewer: React.FC<ModuleViewerProps> = ({
                 {/* Practical application note */}
                 {sec.practicalApplication && (
                   <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-600">
-                    <strong className="text-slate-800">Contexto Aplicado Unisimón:</strong> {sec.practicalApplication}
+                    <strong className="text-slate-800">Ejemplo Ilustrativo de Aplicación:</strong> {sec.practicalApplication}
                   </div>
                 )}
               </div>
             ))}
+
+            {module.references && module.references.length > 0 && (
+              <div className="bg-white p-5 rounded-2xl border border-emerald-100 shadow-2xs space-y-2.5">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#006837] block">
+                  Fuentes y Referencias Académicas del Módulo
+                </span>
+                <ul className="space-y-1.5 text-xs text-slate-600">
+                  {module.references.map((ref, rIdx) => (
+                    <li key={rIdx} className="leading-relaxed">
+                      <strong className="text-slate-800">{ref.title}</strong> · {ref.institution} ({ref.detail})
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="flex justify-end pt-2">
               <button
@@ -249,7 +266,7 @@ export const ModuleViewer: React.FC<ModuleViewerProps> = ({
           <div className="bg-white p-6 sm:p-8 rounded-2xl border border-emerald-100 shadow-2xs space-y-6">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#006837] bg-emerald-50 px-2 py-0.5 rounded">
-                Simulación de Caso Real
+                Escenario Pedagógico Simulado
               </span>
               <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#0F2417] mt-2">
                 {module.caseStudy.title}
@@ -367,13 +384,13 @@ export const ModuleViewer: React.FC<ModuleViewerProps> = ({
           <div className="bg-white p-6 sm:p-8 rounded-2xl border border-emerald-100 shadow-2xs space-y-6">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#006837] bg-emerald-50 px-2 py-0.5 rounded">
-                Evaluación Formativa Oficial
+                Autoevaluación Formativa del OVA
               </span>
               <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#0F2417] mt-2">
                 Cuestionario de Conocimientos: {module.shortTitle}
               </h2>
               <p className="text-xs text-slate-500 mt-1">
-                Responde las 4 preguntas para validar tus competencias y desbloquear la certificación. Se aprueba con un puntaje mínimo del 75%.
+                Responde las 4 preguntas para verificar tu progreso en el OVA. Se aprueba con un puntaje mínimo del 75%.
               </p>
             </div>
 
@@ -480,15 +497,26 @@ export const ModuleViewer: React.FC<ModuleViewerProps> = ({
                   </div>
                 )}
 
-                {hasNextModule && (
-                  <div className="pt-2 flex justify-end">
-                    <button
-                      onClick={onNextModule}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#004D28] hover:bg-[#006837] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
-                    >
-                      <span>Continuar al Siguiente Módulo</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                {(hasNextModule || (quizScore >= 75 && onOpenCertificate)) && (
+                  <div className="pt-2 flex flex-wrap justify-end gap-3">
+                    {quizScore >= 75 && onOpenCertificate && (
+                      <button
+                        onClick={onOpenCertificate}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#DFA035] hover:bg-[#C98B24] text-slate-900 text-xs font-bold rounded-lg transition-colors cursor-pointer"
+                      >
+                        <span>Ver Constancia OVA</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    )}
+                    {hasNextModule && (
+                      <button
+                        onClick={onNextModule}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#004D28] hover:bg-[#006837] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer"
+                      >
+                        <span>Continuar al Siguiente Módulo</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    )}
                   </div>
                 )}
               </div>

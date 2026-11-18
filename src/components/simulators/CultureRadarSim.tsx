@@ -124,13 +124,16 @@ export const CultureRadarSim: React.FC = () => {
           <div className="flex items-center gap-6 mt-3 text-xs">
             <div className="flex items-center gap-2">
               <span className="w-3.5 h-3.5 bg-[#006837] rounded-sm" />
-              <span className="font-semibold text-slate-700">Cultura Actual Unisimón</span>
+              <span className="font-semibold text-slate-700">Perfil Actual (Simulado)</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-3.5 h-3.5 border-2 border-dashed border-[#0EA5E9] bg-sky-100 rounded-sm" />
               <span className="font-semibold text-slate-700">Cultura Deseada (Visión)</span>
             </div>
           </div>
+          <p className="text-[10px] text-slate-500 text-center mt-2">
+            Nota: Escala pedagógica demostrativa (0–100%) por cuadrante; el cuestionario OCAI original distribuye 100 puntos por ítem.
+          </p>
         </div>
 
         {/* Sliders & Diagnostic Levers */}

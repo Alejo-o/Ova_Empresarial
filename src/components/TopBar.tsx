@@ -1,48 +1,30 @@
 import React from 'react';
-import { MapPin, Phone, Mail, User, GraduationCap } from 'lucide-react';
+import { User, GraduationCap } from 'lucide-react';
 
 export const TopBar: React.FC = () => {
   return (
-    <div className="bg-[#00381C] text-emerald-100 text-[11px] py-2 px-4 sm:px-8 border-b border-emerald-900/60 no-print">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5">
-        {/* Left: 3 items en español idénticos a la imagen de referencia */}
-        <div className="flex flex-wrap items-center gap-5 text-emerald-200">
-          <div className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Cra. 59 No. 59-65, Barranquilla y Cúcuta</span>
-          </div>
-
-          <div className="flex items-center gap-1.5">
-            <Phone className="w-3.5 h-3.5 text-emerald-400" />
-            <span>+57 (605) 344 4333</span>
-          </div>
-
-          <div className="flex items-center gap-1.5">
-            <Mail className="w-3.5 h-3.5 text-emerald-400" />
-            <span>ova@unisimon.edu.co</span>
-          </div>
-        </div>
-
-        {/* Right: Portal Padres y Portal Estudiantes en español */}
-        <div className="flex items-center gap-6 text-emerald-200 font-medium">
+    <div className="bg-[#00381C] text-emerald-100 text-[11px] py-2 px-4 sm:px-6 lg:px-8 border-b border-emerald-900/60 no-print">
+      <div className="max-w-7xl mx-auto flex items-center justify-center sm:justify-end">
+        {/* Portales universitarios oficiales verificados */}
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-emerald-200 font-medium">
           <a
-            href="https://estudiantes.unisimon.edu.co"
+            href="https://aulaextendida.unisimon.edu.co/"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap"
           >
-            <User className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Portal Padres</span>
+            <User className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <span>Aula Extendida</span>
           </a>
 
           <a
-            href="https://campus.unisimon.edu.co"
+            href="https://www.unisimon.edu.co/cucuta"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 hover:text-white transition-colors whitespace-nowrap"
           >
-            <GraduationCap className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Portal Estudiantes</span>
+            <GraduationCap className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <span>Portal Sede Cúcuta</span>
           </a>
         </div>
       </div>

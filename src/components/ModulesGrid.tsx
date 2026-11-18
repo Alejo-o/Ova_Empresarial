@@ -16,34 +16,33 @@ export const ModulesGrid: React.FC<ModulesGridProps> = ({
   onSelectModule
 }) => {
   return (
-    <section id="modulos" className="py-20 bg-white border-b border-emerald-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+    <section id="modulos" className="py-14 sm:py-20 bg-white border-b border-emerald-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
         {/* Encabezado de la sección en español */}
         <div className="text-center max-w-2xl mx-auto space-y-1.5">
           <span className="text-[11px] font-bold text-[#DFA035] uppercase tracking-wider block">
-            Académico
+            Contenido Formativo
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0A2B18]">
-            Descubre Nuestros Programas
+          <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#0A2B18]">
+            Descubre Nuestros Módulos
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-            Un currículo integral diseñado para inspirar y desafiar a cada estudiante en su camino profesional.
+            Cinco núcleos temáticos universitarios diseñados para fortalecer competencias en innovación, seguridad digital y gestión organizacional.
           </p>
         </div>
 
-        {/* Rejilla de 5 tarjetas en fila idéntica a la imagen */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        {/* Rejilla de 5 tarjetas */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
           {modules.map((m, idx) => {
             const isCompleted = completedModules.includes(m.id);
             const score = quizScores[m.id];
 
-            // Títulos y etiquetas en español correspondientes
             const levelLabels = [
-              'Edades 3-5 · Inicial',
-              'Grados 1-5 · Primaria',
-              'Grados 6-8 · Media',
-              'Grados 9-12 · Secundaria',
-              'Clubes y Actividades'
+              'Módulo 1 · Innovación',
+              'Módulo 2 · Seguridad Digital',
+              'Módulo 3 · Riesgos (ISO 31000)',
+              'Módulo 4 · Cultura y Liderazgo',
+              'Módulo 5 · Cambio (Kotter)'
             ];
 
             return (
@@ -92,13 +91,13 @@ export const ModulesGrid: React.FC<ModulesGridProps> = ({
           })}
         </div>
 
-        {/* Botón Central 'VER TODOS LOS PROGRAMAS →' */}
+        {/* Botón Central */}
         <div className="flex justify-center pt-2">
           <button
             onClick={() => onSelectModule(modules[0].id)}
             className="px-6 py-3 bg-[#00381C] hover:bg-[#004D28] text-white text-xs font-bold rounded-lg transition-all shadow-xs hover:shadow flex items-center gap-2 cursor-pointer uppercase tracking-wider"
           >
-            <span>Ver Todos los Programas</span>
+            <span>Explorar Primer Módulo</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

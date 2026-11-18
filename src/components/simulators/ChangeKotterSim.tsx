@@ -287,6 +287,10 @@ export const ChangeKotterSim: React.FC = () => {
         </div>
       </div>
 
+      <p className="text-[10px] text-slate-500 -mt-3">
+        Nota: Los termómetros emplean una escala pedagógica ilustrativa para visualizar el impacto de las decisiones en los 8 pasos de Kotter (1996).
+      </p>
+
       {/* Step Stepper Visual */}
       <div className="flex items-center gap-1 overflow-x-auto pb-2">
         {KOTTER_STEPS.map((s, idx) => {

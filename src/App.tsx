@@ -41,9 +41,9 @@ export default function App() {
   const [studentInfo, setStudentInfo] = useState<{ name: string; id: string }>(() => {
     try {
       const saved = localStorage.getItem('unisimon_student_info');
-      return saved ? JSON.parse(saved) : { name: 'Alejandro Martínez', id: '1.042.890.312' };
+      return saved ? JSON.parse(saved) : { name: 'Estudiante de Práctica (Ejemplo)', id: 'Documento de ejemplo' };
     } catch {
-      return { name: 'Alejandro Martínez', id: '1.042.890.312' };
+      return { name: 'Estudiante de Práctica (Ejemplo)', id: 'Documento de ejemplo' };
     }
   });
 
@@ -107,7 +107,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] text-[#132219] flex flex-col font-sans selection:bg-[#006837] selection:text-white">
+    <div className="min-h-screen bg-[#FAFAF8] text-[#132219] flex flex-col font-sans selection:bg-[#006837] selection:text-white overflow-x-clip">
       {/* 1. Institutional Top Bar */}
       <TopBar />
 
@@ -129,9 +129,10 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1">
+      <main className="flex-1 no-print">
         {selectedModuleId && currentModule ? (
           <ModuleViewer
+            key={currentModule.id}
             module={currentModule}
             onBack={() => {
               setSelectedModuleId(null);
@@ -142,10 +143,11 @@ export default function App() {
             savedScore={quizScores[currentModule.id]}
             onNextModule={handleNextModule}
             hasNextModule={hasNextModule}
+            onOpenCertificate={() => setIsCertificateOpen(true)}
           />
         ) : (
           <>
-            {/* 3. Hero Section (Inspiring Minds. Shaping Futures.) */}
+            {/* 3. Hero Section */}
             <Hero
               onExploreModules={() => {
                 const el = document.getElementById('modulos');
@@ -154,10 +156,9 @@ export default function App() {
               onOpenGuide={() => setIsGuideOpen(true)}
             />
 
-            {/* 4. Pillars Bar (Floating dark card overlapping Hero bottom) */}
+            {/* 4. Pillars Bar (5 pedagogical pillars, scrolling to single module selector) */}
             <PillarsBar
-              onSelectModule={handleSelectModule}
-              completedModules={completedModules}
+              onExploreModules={() => handleNavigateSection('modulos')}
             />
 
             {/* 5. About Section (Excellence in Education - Character for Life) */}
@@ -198,11 +199,14 @@ export default function App() {
         onUpdateStudentInfo={handleUpdateStudentInfo}
         completedCount={completedCount}
         totalModules={totalModules}
+        modules={MODULES_DATA}
+        completedModules={completedModules}
+        quizScores={quizScores}
       />
 
       {/* Learning Guide & Methodology Modal */}
       {isGuideOpen && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 no-print">
           <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 border border-emerald-100 shadow-2xl space-y-6 relative max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3 border-b border-emerald-100">
               <div className="flex items-center gap-2">
@@ -221,34 +225,39 @@ export default function App() {
 
             <div className="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
               <p>
-                El <strong>Objeto Virtual de Aprendizaje (OVA)</strong> de la Universidad Simón Bolívar ha sido estructurado siguiendo la arquitectura de formación integral de excelencia internacional:
+                El <strong>Objeto Virtual de Aprendizaje (OVA)</strong> de la Universidad Simón Bolívar · Sede Cúcuta organiza cinco núcleos temáticos universitarios con teoría fundamentada, escenarios pedagógicos simulados, laboratorios interactivos y autoevaluación formativa:
               </p>
 
               <div className="space-y-2.5">
                 <div className="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100">
                   <strong className="text-[#006837] block">1. Innovación y Design Thinking</strong>
-                  <span>Metodología de 5 fases para resolver retos centrados en personas con lienzo interactivo.</span>
+                  <span>Enfoque de 5 fases (Stanford d.school / IDEO) y distinción frente al Doble Diamante (Design Council, 2005).</span>
                 </div>
 
                 <div className="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100">
                   <strong className="text-[#006837] block">2. Ciberseguridad</strong>
-                  <span>Tríada CIA, vectores de ataque y simulador de incidentes en el SOC institucional.</span>
+                  <span>Tríada CIA, MFA, regla 3-2-1 (Krogh), datos Verizon DBIR 2024 y respuesta a incidentes (SANS PICERL / NIST SP 800-61).</span>
                 </div>
 
                 <div className="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100">
                   <strong className="text-[#006837] block">3. Gestión de Riesgos</strong>
-                  <span>Norma ISO 31000, matriz 5x5 y cálculo interactivo de severidad y riesgo residual.</span>
+                  <span>Norma ISO 31000:2018, matriz 5×5 ilustrativa de severidad, riesgo inherente/residual y estrategias de tratamiento.</span>
                 </div>
 
                 <div className="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100">
                   <strong className="text-[#006837] block">4. Cultura Organizacional</strong>
-                  <span>Modelo de Edgar Schein y radar OCAI de Cameron & Quinn con gráfico SVG dinámico.</span>
+                  <span>Niveles y mecanismos de anclaje de Edgar Schein, marco OCAI de Cameron & Quinn y seguridad psicológica.</span>
                 </div>
 
                 <div className="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100">
                   <strong className="text-[#006837] block">5. Gestión del Cambio</strong>
-                  <span>Ruta de 8 pasos de John Kotter con termómetro interactivo de resistencia y adopción.</span>
+                  <span>Modelo de 8 pasos de John Kotter (1996) y curva de transición adaptada de Elisabeth Kübler-Ross (1969).</span>
                 </div>
+              </div>
+
+              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-1">
+                <strong className="text-slate-800 block">Fuentes Institucionales Verificadas (Sede Cúcuta):</strong>
+                <span>Unisimón Cúcuta: Av. 3 No. 13-34 Barrio La Playa · PBX +57 (607) 582 7070 · Inicio en Cúcuta: 17 de agosto de 1999 · Personería Jurídica Res. 1318 de 1972 (Gob. Atlántico) · Universidad Res. 5424 de 2005 (MEN) · Acreditación Institucional en Alta Calidad Res. 015867 de 2021 (2021–2029).</span>
               </div>
             </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UNISIMON_LOGO } from '../data/courseData';
-import { MapPin, Phone, Mail, ArrowRight, Check } from 'lucide-react';
+import { User, ArrowRight, Check } from 'lucide-react';
 
 interface FooterProps {
   onSelectModule: (moduleId: string) => void;
@@ -37,43 +37,32 @@ export const Footer: React.FC<FooterProps> = ({ onSelectModule, onOpenCertificat
               Construyendo un mejor mañana a través de la excelencia académica, la investigación y la innovación con impacto social.
             </p>
 
-            {/* Iconos circulares de redes sociales idénticos al referente */}
-            <div className="flex items-center gap-2 pt-1 text-xs">
+            {/* Canales institucionales verificados */}
+            <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px]">
               <a
-                href="https://facebook.com/unisimon"
+                href="https://www.youtube.com/@unisimon.barranquilla"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-emerald-700/80 flex items-center justify-center hover:bg-white hover:text-[#002B15] transition-all font-bold"
-                aria-label="Facebook"
+                className="px-3 py-1.5 rounded-full border border-emerald-700/80 hover:bg-white hover:text-[#002B15] transition-all font-semibold"
+                aria-label="YouTube Institucional Unisimón"
               >
-                f
+                YouTube
               </a>
               <a
-                href="https://instagram.com/unisimon"
+                href="https://www.unisimon.edu.co/cucuta"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-emerald-700/80 flex items-center justify-center hover:bg-white hover:text-[#002B15] transition-all font-bold"
-                aria-label="Instagram"
+                className="px-3 py-1.5 rounded-full border border-emerald-700/80 hover:bg-white hover:text-[#002B15] transition-all font-semibold"
               >
-                ig
+                Web Cúcuta
               </a>
               <a
-                href="https://youtube.com/unisimon"
+                href="https://aulaextendida.unisimon.edu.co/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-emerald-700/80 flex items-center justify-center hover:bg-white hover:text-[#002B15] transition-all font-bold"
-                aria-label="YouTube"
+                className="px-3 py-1.5 rounded-full border border-emerald-700/80 hover:bg-white hover:text-[#002B15] transition-all font-semibold"
               >
-                yt
-              </a>
-              <a
-                href="https://linkedin.com/school/universidad-simon-bolivar"
-                target="_blank"
-                rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-emerald-700/80 flex items-center justify-center hover:bg-white hover:text-[#002B15] transition-all font-bold"
-                aria-label="LinkedIn"
-              >
-                in
+                Aula Extendida
               </a>
             </div>
           </div>
@@ -81,95 +70,90 @@ export const Footer: React.FC<FooterProps> = ({ onSelectModule, onOpenCertificat
           {/* Columna 2: ENLACES RÁPIDOS */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-white">
-              Enlaces Rápidos
+              Navegación OVA
             </h4>
             <ul className="space-y-2 text-xs text-emerald-200/80">
               <li>
                 <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors cursor-pointer">
-                  Sobre Nosotros
+                  Inicio
                 </button>
               </li>
               <li>
                 <button onClick={() => onSelectModule('innovacion-design-thinking')} className="hover:text-white transition-colors cursor-pointer">
-                  Académico
+                  Módulo 1: Design Thinking
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onSelectModule('ciberseguridad')} className="hover:text-white transition-colors cursor-pointer">
+                  Módulo 2: Ciberseguridad
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onSelectModule('gestion-de-riesgos')} className="hover:text-white transition-colors cursor-pointer">
+                  Módulo 3: Riesgos
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onSelectModule('cultura-organizacional')} className="hover:text-white transition-colors cursor-pointer">
+                  Módulo 4: Cultura
                 </button>
               </li>
               <li>
                 <button onClick={onOpenCertificate} className="hover:text-white transition-colors cursor-pointer">
-                  Admisiones
-                </button>
-              </li>
-              <li>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors cursor-pointer">
-                  Vida en el Campus
-                </button>
-              </li>
-              <li>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors cursor-pointer">
-                  Noticias y Eventos
-                </button>
-              </li>
-              <li>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-white transition-colors cursor-pointer">
-                  Contáctanos
+                  Constancia de Progreso
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Columna 3: RECURSOS */}
+          {/* Columna 3: RECURSOS OFICIALES */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-white">
-              Recursos
+              Portales Oficiales
             </h4>
             <ul className="space-y-2 text-xs text-emerald-200/80">
               <li>
-                <a href="https://estudiantes.unisimon.edu.co" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                  Portal Padres
+                <a href="https://aulaextendida.unisimon.edu.co/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  Aula Extendida
                 </a>
               </li>
               <li>
-                <a href="https://campus.unisimon.edu.co" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                  Portal Estudiantes
+                <a href="https://www.unisimon.edu.co/cucuta" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  Sede Cúcuta
                 </a>
               </li>
               <li>
-                <a href="https://www.unisimon.edu.co" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                  Calendario Escolar
+                <a href="https://www.unisimon.edu.co/cucuta" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  Calendario Académico
                 </a>
               </li>
               <li>
-                <a href="https://www.unisimon.edu.co" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                  Políticas y Ética
-                </a>
-              </li>
-              <li>
-                <a href="https://www.unisimon.edu.co" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                  Bolsa de Empleo
+                <a href="https://www.unisimon.edu.co/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  Sitio Institucional
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Columna 4: CONTÁCTANOS */}
+          {/* Columna 4: AUTORES */}
           <div className="lg:col-span-2 space-y-3 text-xs text-emerald-200/80">
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-white">
-              Contáctanos
+              Autores
             </h4>
-            <div className="space-y-2">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                <span>Cra. 59 No. 59-65, Barranquilla, Colombia</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <span>+57 (605) 344 4333</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <span>info@unisimon.edu.co</span>
-              </div>
-            </div>
+            <ul className="space-y-2.5">
+              <li className="flex items-center gap-2">
+                <User className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Alejandro Olivares</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <User className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Juan Pablo Santamaría</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <User className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Kevin Aguirre</span>
+              </li>
+            </ul>
           </div>
 
           {/* Columna 5: BOLETÍN INFORMATIVO */}
@@ -178,7 +162,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectModule, onOpenCertificat
               Boletín
             </h4>
             <p className="text-[11px] text-emerald-200/80 leading-snug">
-              Mantente actualizado con nuestras últimas noticias y eventos.
+              Consulta novedades académicas oficiales en unisimon.edu.co/cucuta.
             </p>
 
             <form onSubmit={handleSubscribe} className="flex">
@@ -193,22 +177,25 @@ export const Footer: React.FC<FooterProps> = ({ onSelectModule, onOpenCertificat
               <button
                 type="submit"
                 className="px-3 bg-[#DFA035] hover:bg-[#C98B24] text-slate-900 rounded-r-md transition-colors cursor-pointer flex items-center justify-center shrink-0"
-                aria-label="Suscribirse al boletín"
+                aria-label="Registrar interés informativo"
               >
                 {subscribed ? <Check className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
               </button>
             </form>
             {subscribed && (
               <span className="text-[10px] text-emerald-300 block">
-                ¡Gracias por suscribirte al boletín oficial!
+                Registro demostrativo local guardado. Visita unisimon.edu.co/cucuta para comunicados oficiales.
               </span>
             )}
           </div>
         </div>
 
-        {/* Barra de Derechos de Autor en Español */}
-        <div className="text-center text-[11px] text-emerald-300/80">
-          <p>© {new Date().getFullYear()} Universidad Simón Bolívar. Vigilada Mineducación. Todos los derechos reservados.</p>
+        {/* Barra legal institucional verificada */}
+        <div className="text-center text-[11px] text-emerald-300/80 space-y-1">
+          <p>© {new Date().getFullYear()} Universidad Simón Bolívar · Sede Cúcuta. Vigilada Mineducación.</p>
+          <p className="text-[10px] text-emerald-300/60">
+            Personería Jurídica Res. No. 1318 de 1972 (Gob. del Atlántico) · Universidad Res. No. 5424 de 2005 (MEN) · Acreditación Institucional en Alta Calidad Res. No. 015867 de 2021 (vigencia 2021–2029).
+          </p>
         </div>
       </div>
     </footer>
