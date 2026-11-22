@@ -15,7 +15,32 @@
   </head>
   <body class="bg-[#FAFAF8] text-[#132219] antialiased selection:bg-[#006837] selection:text-white">
     <div id="root"></div>
+    <script>
+      (function () {
+        var mounted = false;
+        window.__OVA_MOUNTED__ = function () { mounted = true; };
+        if (window.location.protocol === 'file:') {
+          window.location.replace('./docs/index.html');
+          return;
+        }
+        window.addEventListener('error', function (ev) {
+          var t = ev && ev.target;
+          if (!mounted && t && t.tagName === 'SCRIPT' && t.getAttribute('src') === '/src/main.tsx') {
+            window.location.replace('./docs/index.html');
+          }
+        }, true);
+        window.addEventListener('DOMContentLoaded', function () {
+          var rawEntry = document.querySelector('script[src="/src/main.tsx"]');
+          if (!rawEntry) return;
+          setTimeout(function () {
+            var root = document.getElementById('root');
+            if (!mounted && (!root || !root.hasChildNodes())) {
+              window.location.replace('./docs/index.html');
+            }
+          }, 1200);
+        });
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

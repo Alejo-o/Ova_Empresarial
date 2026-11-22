@@ -1,7 +1,9 @@
 import { ModuleData } from '../types';
+import unisimonLogo from '../assets/unisimon-logo.jpeg';
+import techBadgeLogo from '../assets/tech-badge.jpeg';
 
-export const UNISIMON_LOGO = `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-11-06_at_6.49.52_AM_0c394458.jpeg`;
-export const TECH_BADGE_LOGO = `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-11-06_at_6.49.52_AM_1caec12c.jpeg`;
+export const UNISIMON_LOGO = unisimonLogo;
+export const TECH_BADGE_LOGO = techBadgeLogo;
 
 export const MODULES_DATA: ModuleData[] = [
   {
